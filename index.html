@@ -300,28 +300,19 @@
                             <h4 class=" font-bold">Price</h4>
                         </div>
                         <hr class="border-dashed border-gray-400 mt-2 mb-3">
-                        <div class="flex justify-between items-center mb-4">
-                            <h4 class=" font-light">Seat </h4>
-                            <h4 class=" font-light">class </h4>
-                            <h4 class=" font-light">Price</h4>
-                        </div>
-                        <div class="flex justify-between items-center mb-4">
-                            <h4 class=" font-light">Seat </h4>
-                            <h4 class=" font-light">class </h4>
-                            <h4 class=" font-light">Price</h4>
-                        </div>
+                        <ul id="append-container"></ul>
                         <div class="flex justify-between items-center">
-                            <h4 class=" font-bold">Total Price:<span>0</span></h4>
-                            <h4 class=" font-bold">BDT : <span>0</span></h4>
+                            <h4 class=" font-bold">Total Price</h4>
+                            <h4 class=" font-bold">BDT : <span id="total-price">0</span></h4>
                             
                         </div>
-                        <label class="input input-bordered flex items-center gap-2 py-8 mt-6">
-                            <input type="text" class="grow" placeholder="Have any cuppon?" />
-                            <button class="btn text-white font-bold bg-[#1DD100]">Apply</button>
+                        <label id="cuppon-card" class="input input-bordered flex items-center gap-2 py-8 mt-6  ">
+                            <input type="text" id="cuppon-btn" class="grow" placeholder="Have any cuppon?" />
+                            <button onclick="discountPrice()" class="btn text-white font-bold bg-[#1DD100]">Apply</button>
                         </label>
                         <div class="flex justify-between items-center mt-6">
-                            <h4 class=" font-bold">Grand Total<span>0</span></h4>
-                            <h4 class=" font-bold">BDT : <span>0</span></h4>
+                            <h4 class=" font-bold">Grand Total</h4>
+                            <h4 class=" font-bold">BDT : <span id="discount-price">0</span></h4>
                             
                         </div>
                     </div>
