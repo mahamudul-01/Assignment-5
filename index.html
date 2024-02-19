@@ -33,7 +33,7 @@
                   <li><a>Item 3</a></li>
                 </ul>
               </div> -->
-              <a class="btn btn-ghost  text-3xl text-black font-raleway font-extrabold">P-Ticket</a>
+              <a class="btn btn-ghost  text-3xl text-black font-raleway font-extrabold">Tik-Tak-Ticket</a>
             </div>
             <div class="flex gap-4 text-gray-600 invisible lg:visible">
                 <p>Home</p>
@@ -54,13 +54,13 @@
                     <h4 class="text-5xl font-extrabold">End-To-End Travel With</h4>
                 </div>
                 <div>
-                    <h4 class="text-[#1dd100] text-4xl font-extrabold">P Paribahan</h4>
+                    <h4 class="text-[#1dd100] text-4xl font-extrabold">Palki Paribahan</h4>
                 </div>
                 <div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis, quasi.</p>
+                    <p>Book Your Next Adventure with Ease!</p>
                 </div>
                 <div>
-                    <button class="btn  bg-[#1dd100] text-xl font-bold text-black border-none">Buy Tickets</button>
+                    <a class="btn bg-[#1dd100] font-bold text-3xl px-6 border-none" href="#ticket"> Buy Tickets</a>
                 </div>
             </div>
         </section>
@@ -145,8 +145,8 @@
         </section>
         <section class="  rounded-2xl">
             <div class="w-3/4 text-center mx-auto">
-                <h1 class="text-3xl font-bold mb-5">P.H Paribahan</h1>
-                <p class="text-gray-600 mb-10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil iure deleniti eveniet quae libero iusto neque aut maxime ducimus modi perferendis error recusandae rerum, quasi saepe quo quos deserunt. Consequatur.</p>
+                <h1 class="text-3xl font-bold mb-5">Palki Paribahan</h1>
+                <p class="text-gray-600 mb-10">Join the thousands of travelers who trust [Your Company Name] for their bus transportation needs. Experience the difference today and let us take you where you need to go.</p>
             </div>
             <div class="flex justify-between flex-col lg:flex-row items-center bg-[#FFFFFF] shadow-xl rounded-2xl p-9 relative mb-10">
                 <div class="">
@@ -195,7 +195,7 @@
                 </div>
             </div>
         </section>
-        <section  class="p-12 bg-[#FFFFFF] rounded-2xl shadow-lg">
+        <section id="ticket"  class="p-12 bg-[#FFFFFF] rounded-2xl shadow-lg">
             <div class="flex flex-col lg:flex-row justify-between gap-6">
                 <div class=" w-full lg:w-[60%]">
                     <h4 class="text-2xl font-bold mb-2">Select Your Seat</h4>
@@ -310,6 +310,9 @@
                             <input type="text" id="cuppon-btn" class="grow" placeholder="Have any cuppon?" />
                             <button onclick="discountPrice()" class="btn text-white font-bold bg-[#1DD100]">Apply</button>
                         </label>
+                        <div id="claimed" class="hidden">
+                            <h1 class="text-center text-[#1dd100] font-bold mt-3">You Have Successfully claimed the discount</h1>
+                        </div>
                         <div class="flex justify-between items-center mt-6">
                             <h4 class=" font-bold">Grand Total</h4>
                             <h4 class=" font-bold">BDT : <span id="discount-price">0</span></h4>
@@ -329,7 +332,7 @@
                           <span class="label-text font-bold">Phone Number*</span>
                          
                         </div>
-                        <input type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
+                        <input id="phone-number" type="text" placeholder="Enter your phone number" class="input input-bordered w-full " />
                        
                     </label>
                     <label class="form-control w-full  mt-6">
@@ -341,7 +344,32 @@
                        
                     </label>
 
-                    <button  class="btn w-full mt-6 text-white font-bold bg-[#1DD100]">Next</button>
+                    <div>
+                        <!-- Open the modal using ID.showModal() method -->
+                                <button id="successful-btn" class="btn btn w-full mt-6 text-white font-bold" onclick="my_modal_5.showModal()">open modal</button>
+                                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                <div class="modal-box">
+                                    <div class="mx-auto w-[70%]">
+                                        <div class="flex justify-center">
+                                            <img src="Images/success.png" alt="">
+                                        </div>
+                                        <div class="text-center mt-6">
+                                            <h1 class="text-bold text-3xl mt-3 text-[#38b244]">SUCCESS</h1>
+                                            <p class="font-bold mt-3">Thank you for Booking Our Bus Seats.We are working hard to find the best service and deals for you</p>
+                                            <p class="mt-3">Shortly you will find a confirmation in your email</p>
+                                        </div>
+                                    </div>
+                                    <div class="modal-action">
+                                    <form method="dialog">
+                                        <!-- if there is a button in form, it will close the modal -->
+                                        
+                                        <button onclick="location.reload()" class="btn text-center rounded-full bg-[#38b244] font-bold text-white px-8">Continue</button>
+                                        
+                                    </form>
+                                    </div>
+                                </div>
+                                </dialog>
+                    </div>
                     <div class="flex justify-around underline text-gray-600 mt-10">
                         <p>Terms And Conditions</p>
                         <p>Cancillation Policy</p>
@@ -350,14 +378,16 @@
                 </div>
                 
             </div>
+            
+            
         </section>
     </main>
     <footer class="bg-black h-[500px] text-white  mt-14 py-10 ">
        <div class="max-w-[80%]  mx-auto ">
-        <div class="flex justify-between items-center">
+        <div class="flex flex-col lg:flex-row justify-between items-center text-center lg:text-left">
             <div class="font-inter   mb-10">
                 <h1 class="text-2xl font-bold mb-6">P-Ticket</h1>
-                <p class="w-[400px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, magnam!</p>
+                <p class="">Lorem ipsum dolor sit amet consectetur </p>
 
             </div>
             <div>
@@ -371,8 +401,8 @@
                 </div>
             </div>
        </div>
-       <hr class=" border-dashed border-gray-400 mb-10">
-       <div class="flex justify-between">
+       <hr class=" border-dashed border-gray-400 mb-10 invisible lg:visible">
+       <div class="flex justify-between flex-col lg:flex-row text-center lg:text-left gap-6">
             <div >
                 <p class="font-extralight text-gray-400">All rights reserverd Mahamudul Hasan Mehedi | 2024</p>
             </div>
